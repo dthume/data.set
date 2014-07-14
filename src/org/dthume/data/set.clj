@@ -40,7 +40,7 @@ the first set"
      (->> s2
           (conj sets)
           (bubble-max-key count)
-          (reduce set-union s1 bubbled))))
+          (reduce set-union s1))))
 
 (defn intersection
   "Return a set which is the intersection of the input sets, preserving the
