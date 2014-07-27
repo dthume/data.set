@@ -3,6 +3,8 @@
 Set protocol functions enabling higher performance set algebra for sets which
 are capable of performing efficient bulk operations.
 
+[![Build Status](https://travis-ci.org/dthume/data.set.svg?branch=master)](https://travis-ci.org/dthume/data.set)
+
 ## License
 
 Copyright (C) 2014 David Thomas Hume.
