@@ -1,4 +1,4 @@
-(defproject org.dthume/data.set "0.1.0"
+(defproject org.dthume/data.set "0.1.1-SNAPSHOT"
   :description "Protocols for set operations"
 
   :plugins [[codox "0.8.9"]
