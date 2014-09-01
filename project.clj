@@ -1,4 +1,4 @@
-(defproject org.dthume/data.set "0.1.1-SNAPSHOT"
+(defproject org.dthume/data.set "0.1.0"
   :description "Protocols for set operations"
   :url "http://github.com/dthume/data.set"
   :license "Eclipse Public License 1.0"
