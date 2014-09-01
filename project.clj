@@ -1,6 +1,7 @@
 (defproject org.dthume/data.set "0.1.1-SNAPSHOT"
   :description "Protocols for set operations"
-
+  :url "http://github.com/dthume/data.set"
+  :license "Eclipse Public License 1.0"
   :plugins [[codox "0.8.9"]
             [lein-marginalia "0.7.1"]
             [lein-midje "3.0.0"]
