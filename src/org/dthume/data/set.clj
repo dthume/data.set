@@ -6,22 +6,38 @@
   (set-intersection [lhs rhs])
   (set-difference [lhs rhs]))
 
+(defn default-set-union
+  [lhs rhs]
+  (reduce conj lhs rhs))
+
+(defn default-set-intersection
+  [lhs rhs]
+  (reduce (fn [r i]
+            (if (contains? rhs i)
+              r
+              (disj r i)))
+          lhs lhs))
+
+(defn default-set-difference
+  [lhs rhs]
+  (reduce disj lhs rhs))
+
 (extend-protocol SetAlgebra
   clojure.lang.PersistentHashSet
   (set-union [lhs rhs]
-    (clojure.set/union lhs rhs))
+    (default-set-union lhs rhs))
   (set-intersection [lhs rhs]
-    (clojure.set/intersection lhs rhs))
+    (default-set-intersection lhs rhs))
   (set-difference [lhs rhs]
-    (clojure.set/difference lhs rhs))
+    (default-set-difference lhs rhs))
 
   clojure.lang.PersistentTreeSet
   (set-union [lhs rhs]
-    (clojure.set/union lhs rhs))
+    (default-set-union lhs rhs))
   (set-intersection [lhs rhs]
-    (clojure.set/intersection lhs rhs))
+    (default-set-intersection lhs rhs))
   (set-difference [lhs rhs]
-    (clojure.set/difference lhs rhs)))
+    (default-set-difference lhs rhs)))
 
 (defn- bubble-max-key [k coll]
   "Move a maximal element of coll according to fn k (which returns a number) 
